@@ -6,8 +6,8 @@
                 <div class="font-bold text-2xl">
                     <a href="#" class="text-gray-900">MDE</a>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">
-                    [description goes here] lorem ipsum is a placeholder text to demonstrate the visual form of a typeface.
+                <p class="text-gray-600 text-sm mb-4 mt-2">
+                    I'm a Product Designer and Visual Developer based in Indonesia, specializing in UI/UX design, responsive web design, and visual development.
                 </p>
 
                 <!-- Social Icons -->
@@ -38,10 +38,9 @@
                 <h3 class="text-lg font-medium mb-4">Products</h3>
                 <ul class="space-y-2">
                     <li><a href="#" class="text-gray-600 hover:text-gray-900">All Products</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Product 1 (One)</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Product 2 (Two)</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Product 3 (Three)</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Product 4 (Four)</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Web Development</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Graphic Designer</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-900">Digital Marketing</a></li>
                 </ul>
             </div>
 
@@ -69,19 +68,7 @@
 
         <!-- Bottom Copyright -->
         <div class="border-t border-gray-200 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-600 text-sm">© 2022 Breeze. All Rights Reserved. Site by Flowbase</p>
-
-            <!-- Language Selector -->
-            <div class="mt-4 md:mt-0">
-                <button class="flex items-center text-gray-600 hover:text-gray-900">
-                    <span class="mr-2">
-                        <img src="{{ asset('images/flags/en.svg') }}" alt="Language" class="h-5 w-5 rounded-full">
-                    </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-            </div>
+            <p class="text-gray-600 text-sm">© 2025 MichDE. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

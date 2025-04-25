@@ -22,17 +22,13 @@
         <!-- Description -->
         <div class="text-gray-700 max-w-2xl mx-auto mb-12">
             <p class="mb-2">
-                a Product Designer and Visual Developer in SF.
-            </p>
-            <p>
-                I specialize in UI/UX Design, Responsive Web Design,
-                <br>and Visual Development.
+                I'm a Product Designer and Visual Developer based in Indonesia, <br> specializing in UI/UX design, responsive web design, <br>and visual development.
             </p>
         </div>
 
         <!-- CTA Button -->
         <div>
-            <a href="#contact" class="inline-block bg-black text-white font-medium px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
+            <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="inline-block bg-black text-white font-medium px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
                 CONNECT WITH ME
             </a>
         </div>

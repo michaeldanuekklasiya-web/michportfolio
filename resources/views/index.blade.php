@@ -23,6 +23,15 @@
     </div>
 
     <div>
+        @include('layouts.home.expe')
+    </div>
+
+    <div>
+        @include('layouts.home.porto')
+    </div>
+
+
+    <div>
         @include('includes.footer')
     </div>
 </body>
