@@ -11,8 +11,8 @@
             ['src' => 'bidan.png', 'alt' => 'Bidan'],
             ['src' => 'Bunny.png', 'alt' => 'Bunny'],
             ['src' => 'Chu.png', 'alt' => 'Chu'],
-            ['src' => 'DirtyShoes.png', 'alt' => 'Dirty Shoes'],
-            ['src' => 'moeka.png', 'alt' => 'Moeka'],
+            // ['src' => 'DirtyShoes.png', 'alt' => 'Dirty Shoes'],
+            // ['src' => 'moeka.png', 'alt' => 'Moeka'],
             ['src' => 'Siburju2.png', 'alt' => 'Siburju'],
             ['src' => 'waroenk.png', 'alt' => 'Waroenk']
           ] as $logo)
@@ -48,11 +48,11 @@
       /* Responsiveness for Mobile */
       @media (max-width: 640px) {
         .client-logo {
-          height: 40px; /* Reduce the size of the logo on mobile */
+          height: 35px; /* Slightly increase the logo size for better visibility */
         }
 
         .marquee {
-          gap: 6px; /* Reduce the space between items on smaller screens */
+          gap: 2px; /* Slightly increase the space between items on mobile for clarity */
         }
       }
 
