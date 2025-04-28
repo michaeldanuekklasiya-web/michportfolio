@@ -1,7 +1,7 @@
 <section class="bg-white py-10 overflow-hidden relative">
-    <h2 class="text-center text-black text-sm mb-8 tracking-wide uppercase">
+    {{-- <h2 class="text-center text-black text-sm mb-8 tracking-wide uppercase">
       Our Client
-    </h2>
+    </h2> --}}
 
     <div class="relative w-full overflow-hidden">
       <div class="marquee-wrapper">

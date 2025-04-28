@@ -167,11 +167,11 @@
         </div>
 
         <!-- Pagination -->
-        <div id="pagination" class="flex justify-center mt-8">
+        {{-- <div id="pagination" class="flex justify-center mt-8">
             <button id="prev-page" class="px-4 py-2 bg-gray-900 text-white text-sm rounded">Previous</button>
             <span id="page-number" class="mx-4 text-sm text-gray-600">Page 1</span>
             <button id="next-page" class="px-4 py-2 bg-gray-900 text-white text-sm rounded">Next</button>
-        </div>
+        </div> --}}
 
     </div>
 </section>

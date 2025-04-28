@@ -1,5 +1,5 @@
 <!-- Header Navigation -->
-<header class="bg-white shadow-sm py-4">
+<header id="navbar" class="bg-white py-4 fixed w-full top-0 left-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-[50px] flex items-center justify-between">
         <!-- Logo -->
         <div class="flex-1">
@@ -72,6 +72,16 @@
 </header>
 
 <script>
+     // Sticky Navbar with shadow effect on scroll
+     window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('shadow-md');
+        } else {
+            navbar.classList.remove('shadow-md');
+        }
+    });
+
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
         document.getElementById('mobile-menu').classList.toggle('hidden');
     });

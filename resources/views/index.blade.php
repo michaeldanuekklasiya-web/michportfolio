@@ -38,12 +38,14 @@
         </div>
 
         <div>
-            @include('layouts.home.project')
+            @include('layouts.home.sponsor')
         </div>
 
         <div>
-            @include('layouts.home.sponsor')
+            @include('layouts.home.project')
         </div>
+
+
 
 
         <div>
