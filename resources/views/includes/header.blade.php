@@ -14,9 +14,8 @@
             <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
             <a href="#" class="text-gray-700 hover:text-gray-900">Project</a>
         </nav>
-
         <!-- Contact Buttons Group -->
-        <div class="flex-1 flex justify-end items-center space-x-4">
+        <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
             <!-- Like Button -->
             <div class="relative">
                 <button id="likeButton" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
@@ -33,6 +32,7 @@
             </a>
         </div>
 
+
         <!-- Mobile Menu Button -->
         <div class="md:hidden ml-4">
             <button id="mobile-menu-button" class="text-gray-700">
@@ -44,33 +44,62 @@
     </div>
 
     <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white w-full py-2 shadow-md">
-        <div class="container mx-auto px-4 flex flex-col space-y-2">
-            <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Home</a>
-            <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">About</a>
-            <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Portfolio</a>
-            <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Services</a>
-            <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Project</a>
+    <!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="md:hidden hidden fixed inset-0 bg-white flex flex-col items-center justify-center space-y-6 z-50 opacity-0 transition-opacity duration-300">
+    <!-- Close Button -->
+    <button id="close-menu-button" class="absolute top-6 right-6 text-gray-700 hover:text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
 
-            <!-- Mobile Contact Buttons -->
-            <div class="flex items-center space-x-4 py-2">
-                <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </button>
-                <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="bg-black text-white px-6 py-2.5 rounded-full">
-                    Get in touch
-                </a>
-            </div>
-        </div>
+    <!-- Navigation Links -->
+    <div class="flex flex-col items-center space-y-8 mt-10">
+        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Home</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">About</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Portfolio</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Services</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Project</a>
+
+        <!-- Get in Touch Button -->
+        <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="bg-black text-white px-6 py-2.5 rounded-full text-base hover:bg-gray-800 transition duration-300 mt-6">
+            Get in touch
+        </a>
     </div>
+</div>
+
+
 </header>
 
 <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
         document.getElementById('mobile-menu').classList.toggle('hidden');
     });
+
+    document.getElementById('close-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.add('opacity-100');
+            mobileMenu.classList.remove('opacity-0');
+        }, 10); // Timeout sedikit supaya transition jalan
+    });
+
+    closeMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.add('opacity-0');
+        mobileMenu.classList.remove('opacity-100');
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300); // Waktu tunggu sama dengan durasi transition
+    });
+
 
     document.addEventListener('DOMContentLoaded', function() {
         const likeButton = document.getElementById('likeButton');

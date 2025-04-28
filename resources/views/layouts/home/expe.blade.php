@@ -49,21 +49,25 @@
 
     <div class="max-w-3xl mx-auto relative z-10">
         <!-- Section Title -->
-        <h2 class="text-5xl font-bold text-white mb-14">My Experience</h2>
+        <h2 class="text-5xl font-bold text-white mb-14 text-center lg:text-left text-xl sm:text-4xl lg:text-5xl">My Experience</h2>
 
         <!-- Initial Experience Timeline (Top 5) -->
         <div class="space-y-4" id="initial-experience">
             <!-- M-Knows -->
-            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Mar 2025</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Present</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>M-Knows Consulting</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-nodejs-plain colored text-green-400" title="nodejs"></i>
                             <i class="devicon-express-original text-green-400" title="express"></i>
                         </span>
@@ -72,39 +76,45 @@
                 </div>
             </div>
 
-            <!-- Jiwa Kreatif -->
-            <div data-aos="fade-up" data-aos-duration="1000"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-green-500 transition-all duration-300 hover:shadow-lg hover:shadow-green-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+
+            <!-- Jiwa -->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-green-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Nov 2023</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Present</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Jiwa Kreatif Indonesia</span>
-                        <span class="ml-3 flex space-x-2">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-figma-plain text-purple-400" title="Figma"></i>
                             <i class="devicon-laravel-plain text-red-400" title="Laravel"></i>
-                            {{-- <i class="devicon-javascript-plain text-yellow-400" title="JavaScript"></i>
-                            <i class="devicon-photoshop-plain text-blue-400" title="Photoshop"></i>
-                            <i class="devicon-illustrator-plain text-orange-400" title="Adobe Illustrator"></i> --}}
                         </span>
                     </h3>
                     <p class="text-neutral-400">Chief Executive Officer</p>
                 </div>
             </div>
 
-            <!-- Timah -->
-            <div data-aos="fade-up" data-aos-duration="1200"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-yellow-500 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- Timah-->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-red-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Sep 2024</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Feb 2025</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>PT Timah Industri</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-figma-plain text-purple-400" title="Figma"></i>
                             <i class="devicon-laravel-plain text-red-400" title="Laravel"></i>
                         </span>
@@ -113,17 +123,21 @@
                 </div>
             </div>
 
-            <!-- Kejaksaan -->
-            <div data-aos="fade-up" data-aos-duration="1400"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-red-500 transition-all duration-300 hover:shadow-lg hover:shadow-red-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- Kejaksaan-->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-orange-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Aug 2022</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Aug 2023</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Kejaksaan Republik Indonesia</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-photoshop-plain text-blue-400" title="Photoshop"></i>
                             <i class="devicon-illustrator-plain text-yellow-400" title="Illustrator"></i>
                         </span>
@@ -133,16 +147,20 @@
             </div>
 
             <!-- Bidan Nova -->
-            <div data-aos="fade-up" data-aos-duration="1600"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Mar 2023</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Jun 2023</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Klinik Bidan Nova</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-photoshop-plain text-blue-400" title="Photoshop"></i>
                             <i class="devicon-figma-plain text-purple-400" title="Figma"></i>
                         </span>
@@ -150,6 +168,7 @@
                     <p class="text-neutral-400">Graphic Designer</p>
                 </div>
             </div>
+
         </div>
 
         <!-- Learn More Indicator -->
@@ -164,17 +183,22 @@
 
         <!-- Hidden Experience Timeline (Remaining Jobs) -->
         <div class="space-y-4 mt-8 opacity-0 max-h-0 overflow-hidden transition-all duration-700 ease-in-out" id="hidden-experience">
+
             <!-- Halaman Moeka -->
-            <div data-aos="fade-up" data-aos-duration="2000" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Oct 2022</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Feb 2023</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Halaman Moeka Publishing</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-illustrator-plain text-yellow-400" title="Illustrator"></i>
                             <i class="devicon-indesign-plain text-pink-400" title="InDesign"></i>
                         </span>
@@ -183,17 +207,21 @@
                 </div>
             </div>
 
-            <!-- United Teknologi -->
-            <div data-aos="fade-up" data-aos-duration="2200"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- UNITED -->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-emerald-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Aug 2022</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Oct 2022</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>PT United Teknologi Integrasi</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-linux-plain text-yellow-400" title="Linux"></i>
                             <i class="devicon-windows8-original text-blue-400" title="Windows"></i>
                         </span>
@@ -202,17 +230,21 @@
                 </div>
             </div>
 
-            <!-- Alluneed -->
-            <div data-aos="fade-up" data-aos-duration="2400" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-green-500 transition-all duration-300 hover:shadow-lg hover:shadow-green-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- ALLUNEED -->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-lime-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Jan 2020</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Jan 2022</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Alluneed Digital Indonesia</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-facebook-plain text-blue-400" title="Facebook"></i>
                             <i class="devicon-google-plain text-red-400" title="Google"></i>
                         </span>
@@ -221,17 +253,21 @@
                 </div>
             </div>
 
-            <!-- CyberLabs -->
-            <div data-aos="fade-up" data-aos-duration="2600" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-yellow-500 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- CYBERLABS -->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-yellow-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Aug 2021</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Nov 2021</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>CyberLabs Official</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-javascript-plain text-yellow-400" title="JavaScript"></i>
                             <i class="devicon-php-plain text-blue-400" title="PHP"></i>
                         </span>
@@ -240,17 +276,21 @@
                 </div>
             </div>
 
-            <!-- Kejar.Id -->
-            <div data-aos="fade-up" data-aos-duration="2800"  class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex justify-between items-center border-l-4 border-red-500 transition-all duration-300 hover:shadow-lg hover:shadow-red-900/20">
-                <div class="flex items-center space-x-3 text-neutral-400">
+            <!-- KEJAR ID -->
+            <div data-aos="fade-up" data-aos-duration="800" class="bg-neutral-900 bg-opacity-80 backdrop-blur-sm rounded-lg p-8 flex flex-col lg:flex-row justify-between items-center lg:items-center border-l-4 border-red-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20">
+                <!-- Tanggal dan Presentasi (Mobile dan Desktop) -->
+                <div class="flex items-center space-x-3 text-neutral-400 mb-4 lg:mb-0">
                     <span>Jan 2021</span>
                     <span class="w-5 h-px bg-neutral-500"></span>
                     <span>Mar 2021</span>
                 </div>
-                <div class="text-right">
-                    <h3 class="text-white text-xl font-semibold flex items-center justify-end">
+
+                <!-- Nama Perusahaan dan Posisi -->
+                <div class="text-center lg:text-right">
+                    <h3 class="text-white text-xl font-semibold flex items-center justify-center lg:justify-end">
                         <span>Kejar.Id</span>
-                        <span class="ml-3 flex space-x-1">
+                        <!-- Ikon hanya muncul di desktop (lg:flex) -->
+                        <span class="ml-3 flex space-x-1 hidden lg:flex">
                             <i class="devicon-html5-plain text-orange-400" title="HTML5"></i>
                             <i class="devicon-css3-plain text-blue-400" title="CSS3"></i>
                         </span>

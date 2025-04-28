@@ -17,7 +17,7 @@
             ['src' => 'waroenk.png', 'alt' => 'Waroenk']
           ] as $logo)
             <a href="#" target="_blank" class="flex items-center justify-center">
-              <img src="{{ asset('img/vendor/' . $logo['src']) }}" alt="{{ $logo['alt'] }}" class="h-[80px] w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+              <img src="{{ asset('img/vendor/' . $logo['src']) }}" alt="{{ $logo['alt'] }}" class="client-logo h-[80px] w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
             </a>
           @endforeach
         </div>
@@ -44,5 +44,27 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
+
+      /* Responsiveness for Mobile */
+      @media (max-width: 640px) {
+        .client-logo {
+          height: 40px; /* Reduce the size of the logo on mobile */
+        }
+
+        .marquee {
+          gap: 6px; /* Reduce the space between items on smaller screens */
+        }
+      }
+
+      /* Responsiveness for Tablet and Larger Screens */
+      @media (min-width: 641px) {
+        .client-logo {
+          height: 80px; /* Default logo size for larger screens */
+        }
+
+        .marquee {
+          gap: 16px; /* Space between items on larger screens */
+        }
+      }
     </style>
-  </section>
+</section>

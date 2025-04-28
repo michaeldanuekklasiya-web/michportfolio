@@ -20,11 +20,12 @@
         </h1>
 
         <!-- Description -->
-        <div class="text-gray-700 max-w-2xl mx-auto mb-12">
-            <p class="mb-2">
-                I'm a Product Designer and Visual Developer based in Indonesia, <br> specializing in UI/UX design, responsive web design, <br>and visual development.
-            </p>
-        </div>
+<div class="text-gray-700 max-w-2xl mx-auto mb-12 px-4">
+    <p class="text-base md:text-lg leading-relaxed">
+        I'm a Product Designer and Visual Developer based in Indonesia, specializing in UI/UX design, responsive web design, and visual development.
+    </p>
+</div>
+
 
         <!-- CTA Button -->
         <div>
