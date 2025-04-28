@@ -7,7 +7,7 @@
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="../img/logo2.png" rel="shortcut icon">
+    <link href="../img/fav.png" rel="shortcut icon">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -17,27 +17,31 @@
     <title>michaeldanuekklasiya</title>
 </head>
 <body class="bg-gray-50 font-sans leading-normal tracking-normal">
-    <div>
-        @include('includes.header')
-    </div>
+        <div>
+            @include('includes.header')
+        </div>
 
-    <div>
-        @include('layouts.home.hero')
-    </div>
+        <div>
+            @include('layouts.home.hero')
+        </div>
 
-    <div>
-        @include('layouts.home.expe')
-    </div>
+        <div>
+            @include('layouts.home.expe')
+        </div>
 
-    <div>
-        @include('layouts.home.porto')
-    </div>
+        <div>
+            @include('layouts.home.sponsor')
+        </div>
 
 
-    <div>
-        @include('includes.footer')
-    </div>
-
+        <div>
+            @include('includes.footer')
+        </div>
+     <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn"
+  class="hidden fixed bottom-6 right-6 bg-white text-black p-3 rounded-full shadow-lg transition-opacity opacity-0">
+  ↑
+</button>
     <style>
         /* Floating animation using CSS */
         .floating-image {
@@ -56,6 +60,30 @@
 
     <script>
         AOS.init();
+
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.remove("hidden");
+            scrollToTopBtn.classList.add("opacity-100");
+            scrollToTopBtn.classList.remove("opacity-0");
+        } else {
+            scrollToTopBtn.classList.add("opacity-0");
+            setTimeout(() => {
+            if (window.scrollY < 300) {
+                scrollToTopBtn.classList.add("hidden");
+            }
+            }, 300); // Delay supaya animasi opacity jalan dulu baru hidden
+        }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        });
 
         document.addEventListener("DOMContentLoaded", () => {
             const images = document.querySelectorAll(".parallax-image");
