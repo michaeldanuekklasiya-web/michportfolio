@@ -29,8 +29,13 @@
         <!-- CTA Button -->
         <div>
             <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="inline-block bg-black text-white font-medium px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
-                CONNECT WITH ME
+                Connect With Me
             </a>
         </div>
+
+    </div>
+    <div id="parallaxContainer" class="relative z-10 mx-auto flex justify-center items-center pointer-events-none">
+        <img src="/img/assets/1.png" width="450" alt="Floating Image"
+            class="parallax-image hidden absolute top-[-180px] right-[10px] lg:block" />
     </div>
 </section>
