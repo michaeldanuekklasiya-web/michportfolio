@@ -1,6 +1,4 @@
-<section class="relative py-16 px-4 overflow-hidden" style="background: linear-gradient(to bottom right, #111111, #000000);">
-
-
+<section class="py-16 px-4 overflow-hidden" style="background: linear-gradient(to bottom right, #111111, #000000);">
 
     {{-- <div
     id="parallaxContainer"
@@ -8,44 +6,13 @@
 
     <img
         src="/img/assets/14.png"
-        width="450"
+        width="350"
         alt="Noodle Image"
         style="transform: rotate(45deg);"
-        class="parallax-image hidden lg:block absolute top-[524px] left-[108px] z-99"/>
+        class="parallax-image hidden lg:block absolute top-[1724px] left-[30px] z-99"/>
 </div> --}}
-    <!-- Floating Skill Icons Background -->
-    <div class="absolute inset-0 overflow-hidden opacity-10">
-        <div class="absolute top-10 left-10 text-3xl">
-            <i class="devicon-react-original"></i>
-        </div>
-        <div class="absolute top-24 right-20 text-4xl">
-            <i class="devicon-javascript-plain"></i>
-        </div>
-        <div class="absolute top-40 left-1/3 text-5xl">
-            <i class="devicon-python-plain"></i>
-        </div>
-        <div class="absolute bottom-1/4 left-16 text-3xl">
-            <i class="devicon-nodejs-plain"></i>
-        </div>
-        <div class="absolute bottom-40 right-1/4 text-4xl">
-            <i class="devicon-html5-plain"></i>
-        </div>
-        <div class="absolute bottom-20 left-1/4 text-3xl">
-            <i class="devicon-css3-plain"></i>
-        </div>
-        <div class="absolute top-1/3 right-10 text-3xl">
-            <i class="devicon-tailwindcss-plain"></i>
-        </div>
-        <div class="absolute bottom-10 right-10 text-5xl">
-            <i class="devicon-php-plain"></i>
-        </div>
-        <div class="absolute top-1/2 left-10 text-4xl">
-            <i class="devicon-figma-plain"></i>
-        </div>
-    </div>
 
     <!-- Subtle Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
 
     <div class="max-w-3xl mx-auto relative z-10">
         <!-- Section Title -->

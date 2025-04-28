@@ -26,7 +26,19 @@
         </div>
 
         <div>
+            @include('layouts.home.count')
+        </div>
+
+        {{-- <div>
+            @include('layouts.home.about')
+        </div> --}}
+
+        <div>
             @include('layouts.home.expe')
+        </div>
+
+        <div>
+            @include('layouts.home.project')
         </div>
 
         <div>
