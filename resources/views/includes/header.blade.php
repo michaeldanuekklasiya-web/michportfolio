@@ -12,7 +12,6 @@
             <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
             <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
             <a href="#" class="text-gray-700 hover:text-gray-900">Portfolio</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">Doc's Learning</a>
         </nav>
         <!-- Contact Buttons Group -->
         <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
