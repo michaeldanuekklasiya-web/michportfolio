@@ -34,8 +34,18 @@
         </div>
 
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden ml-4">
+        <!-- Mobile Menu Button & Love Count (Mobile Only) -->
+        <div class="md:hidden ml-4 flex items-center space-x-3">
+            <!-- Like Button (Mobile) -->
+            <div class="relative">
+                <button id="likeButton" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
+                    <svg id="likeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                </button>
+                <span id="likeCounter" class="absolute -bottom-2 -right-1 text-xs font-medium bg-white text-gray-600 rounded-full h-5 w-5 flex items-center justify-center border border-gray-100">0</span>
+            </div>
+            <!-- Hamburger Menu Button -->
             <button id="mobile-menu-button" class="text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
