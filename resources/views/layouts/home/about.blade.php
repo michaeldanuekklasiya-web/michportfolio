@@ -1,53 +1,185 @@
-<!-- layouts/home/about.blade.php -->
-<section class="bg-white py-16 md:py-24">
-    <div class="container mx-auto px-6 max-w-7xl text-center md:px-8">
-        <div class="flex flex-col-reverse md:flex-row items-center md:justify-between space-y-12 md:space-y-0">
-            <!-- Content Section -->
-            <div class="md:w-1/2 md:pr-10">
-                <h1 class="text-4xl font-semibold text-gray-900 mb-6 leading-tight">Michael Danu Ekklasiya</h1>
-                <h2 class="text-xl md:text-2xl text-gray-700 mb-6">
-                    Jakarta-based <span class="text-orange-400 font-semibold">Product Designer</span> with a focus on
-                    <span class="text-orange-400 font-semibold">Graphic Design</span> and
-                    <span class="text-orange-400 font-semibold">Fullstack Development</span>.
-                </h2>
-
-                <p class="text-gray-600 mb-8 leading-relaxed text-lg">
-                    Michael Danu Ekklasiya has over 15 years of experience in digital design and development. He specializes in creating clear and compelling visual experiences for startups, large agencies, and as a freelancer.
-                </p>
-
-                <p class="text-lg text-gray-800 font-medium my-8">Let’s collaborate and create something amazing.</p>
-
-                <a href="mailto:michaeldanuekklasiya@gmail.com"
-                   class="inline-block border border-gray-400 px-6 py-3 text-gray-800 hover:bg-orange-400 hover:text-white transition duration-300 rounded-lg mb-8">
-                    michaeldanuekklasiya.my.id
-                </a>
-
-                <div class="flex justify-center gap-6">
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30" class="w-6 h-6">
-                            <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30" class="w-6 h-6">
-                            <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 30 30" class="w-6 h-6">
-                            <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533c2.987,0,3.539,1.966,3.539,4.522V22z"></path>
-                        </svg>
-                    </a>
+<!-- About Section with Modern Skills & Technologies -->
+<section class="bg-gray-50 py-16">
+    <div class="container mx-auto max-w-3xl px-4">
+        <div class="flex flex-col items-start">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                I'm a passionate Product Designer and Visual Developer with over 5 years of experience creating digital experiences that matter. I specialize in UI/UX design, responsive web development, and visual storytelling.
+            </p>
+            <p class="text-gray-600 text-lg mb-10 leading-relaxed">
+                My approach combines creative design thinking with technical expertise to deliver solutions that are both beautiful and functional. I believe in creating experiences that not only look great but also solve real problems for users.
+            </p>
+        </div>
+        <div class="mt-10">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Skills & Technologies</h3>
+            <!-- Progress Bars -->
+            <div class="mb-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Design Skills -->
+                <div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 21l3-1.5L15 21l-.75-4"></path></svg>
+                        Design
+                    </h4>
+                    <div class="space-y-2">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">UI/UX Design</span>
+                                <span class="text-xs text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-blue-600 h-2 rounded-full transition-all duration-700" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">Figma</span>
+                                <span class="text-xs text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-purple-600 h-2 rounded-full transition-all duration-700" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">Photoshop</span>
+                                <span class="text-xs text-gray-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-green-600 h-2 rounded-full transition-all duration-700" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Development Skills -->
+                <div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path></svg>
+                        Development
+                    </h4>
+                    <div class="space-y-2">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">PHP/Laravel</span>
+                                <span class="text-xs text-gray-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-red-600 h-2 rounded-full transition-all duration-700" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">JavaScript</span>
+                                <span class="text-xs text-gray-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-yellow-600 h-2 rounded-full transition-all duration-700" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-xs font-medium text-gray-700">Tailwind CSS</span>
+                                <span class="text-xs text-gray-500">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-progress bg-cyan-600 h-2 rounded-full transition-all duration-700" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Image Section -->
-            <div class="md:w-1/2 mt-12 md:mt-0">
-                <div class="rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
-                    <img
-                        src="{{ asset('img/mich.png') }}"
-                        alt="Michal Prekop"
-                        class="w-full h-auto object-cover rounded-lg">
+            <!-- Design Tools & Programming Languages/Frameworks -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Design Tools -->
+                <div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="M8 12l2 2 4-4" stroke-width="2"/></svg>
+                        Design Tools
+                    </h4>
+                    <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-figma-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Figma</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-photoshop-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Photoshop</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-illustrator-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Illustrator</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-xd-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Adobe XD</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-aftereffects-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">After Effects</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-premierepro-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Premiere Pro</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Programming Languages & Frameworks -->
+                <div>
+                    <h4 class="text-base font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke-width="2"/><path d="M8 16h8M8 12h8M8 8h8" stroke-width="2"/></svg>
+                        <span class="block leading-tight">
+                            Programming & Frameworks
+                        </span>
+                    </h4>
+                    <div class="grid grid-cols-3 md:grid-cols-4 gap-4">
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-php-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">PHP</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-laravel-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Laravel</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-nextjs-original colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Next.js</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-javascript-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">JavaScript</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-typescript-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">TypeScript</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-html5-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">HTML5</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-css3-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">CSS3</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-tailwindcss-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Tailwind</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-vuejs-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Vue.js</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-react-original colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">React</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-git-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Git</span>
+                        </div>
+                        <div class="tool-item group flex flex-col items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-lg transition-all cursor-pointer hover:-translate-y-1">
+                            <i class="devicon-nodejs-plain colored text-3xl mb-1"></i>
+                            <span class="text-xs font-medium text-gray-700">Node.js</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

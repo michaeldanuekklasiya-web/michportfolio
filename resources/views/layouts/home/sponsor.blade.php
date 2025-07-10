@@ -4,8 +4,22 @@
     </h2> --}}
 
     <div class="relative w-full overflow-hidden">
-      <div class="marquee-wrapper">
+      <div class="marquee-wrapper group">
         <div class="marquee flex items-center justify-center gap-16">
+          @foreach ([
+            ['src' => 'alluneed.png', 'alt' => 'All U Need'],
+            ['src' => 'bidan.png', 'alt' => 'Bidan'],
+            ['src' => 'Bunny.png', 'alt' => 'Bunny'],
+            ['src' => 'Chu.png', 'alt' => 'Chu'],
+            // ['src' => 'DirtyShoes.png', 'alt' => 'Dirty Shoes'],
+            // ['src' => 'moeka.png', 'alt' => 'Moeka'],
+            ['src' => 'Siburju2.png', 'alt' => 'Siburju'],
+            ['src' => 'waroenk.png', 'alt' => 'Waroenk']
+          ] as $logo)
+            <a href="#" target="_blank" class="flex items-center justify-center">
+              <img src="{{ asset('img/vendor/' . $logo['src']) }}" alt="{{ $logo['alt'] }}" class="client-logo h-[80px] w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+            </a>
+          @endforeach
           @foreach ([
             ['src' => 'alluneed.png', 'alt' => 'All U Need'],
             ['src' => 'bidan.png', 'alt' => 'Bidan'],
@@ -31,40 +45,43 @@
     <style>
       .marquee-wrapper {
         position: relative;
-        width: 200%;
-        display: flex;
+        width: 100vw;
+        overflow: hidden;
       }
-
       .marquee {
         display: flex;
-        animation: marquee 40s linear infinite;
+        width: max-content;
+        min-width: 100vw;
+        animation: marquee 30s linear infinite;
+        animation-play-state: running;
       }
-
+      .marquee-wrapper:hover .marquee {
+        animation-play-state: paused;
+      }
       @keyframes marquee {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-
-      /* Responsiveness for Mobile */
       @media (max-width: 640px) {
-        .client-logo {
-          height: 35px; /* Slightly increase the logo size for better visibility */
-        }
-
-        .marquee {
-          gap: 2px; /* Slightly increase the space between items on mobile for clarity */
-        }
+        .client-logo { height: 35px; }
+        .marquee { gap: 2px; }
       }
-
-      /* Responsiveness for Tablet and Larger Screens */
       @media (min-width: 641px) {
-        .client-logo {
-          height: 80px; /* Default logo size for larger screens */
-        }
-
-        .marquee {
-          gap: 16px; /* Space between items on larger screens */
-        }
+        .client-logo { height: 80px; }
+        .marquee { gap: 16px; }
       }
     </style>
+    <script>
+      // Pause/resume marquee on hover for smoothness (for all browsers)
+      document.addEventListener('DOMContentLoaded', function() {
+        const marqueeWrapper = document.querySelector('.marquee-wrapper');
+        const marquee = document.querySelector('.marquee');
+        marqueeWrapper.addEventListener('mouseenter', function() {
+          marquee.style.animationPlayState = 'paused';
+        });
+        marqueeWrapper.addEventListener('mouseleave', function() {
+          marquee.style.animationPlayState = 'running';
+        });
+      });
+    </script>
 </section>
