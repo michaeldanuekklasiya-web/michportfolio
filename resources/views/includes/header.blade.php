@@ -58,7 +58,7 @@
     <div class="flex flex-col items-center space-y-8 mt-10">
         <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Home</a>
         <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">About</a>
-        <a href="#experience" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Pengalaman</a>
+        <a href="#experience" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Experience</a>
         <a href="#portfolio" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Portfolio</a>
         <a href="#testimonials" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Testimoni</a>
         <a href="#footer" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Contact</a>
@@ -108,6 +108,18 @@
         setTimeout(() => {
             mobileMenu.classList.add('hidden');
         }, 300); // Waktu tunggu sama dengan durasi transition
+    });
+
+    // Tutup mobile menu saat klik salah satu link di dalamnya
+
+    document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('opacity-0');
+            mobileMenu.classList.remove('opacity-100');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
     });
 
 
