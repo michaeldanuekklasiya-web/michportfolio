@@ -1,4 +1,4 @@
-<section class="py-16 px-4 overflow-hidden" style="background: linear-gradient(to bottom right, #111111, #000000);">
+<section id="experience" class="py-16 px-4 overflow-hidden" style="background: linear-gradient(to bottom right, #111111, #000000);">
 
     {{-- <div
     id="parallaxContainer"

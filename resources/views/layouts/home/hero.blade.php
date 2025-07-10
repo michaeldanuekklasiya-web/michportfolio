@@ -1,5 +1,5 @@
 <!-- Minimal Hero/Jumbotron Section -->
-<section class="bg-white py-16 md:py-24">
+<section id="home" class="bg-white py-16 md:py-24">
     <div class="container mx-auto px-4 max-w-3xl text-center">
         <!-- Avatar Image in Light Circle -->
         <div class="relative mb-6 inline-block">

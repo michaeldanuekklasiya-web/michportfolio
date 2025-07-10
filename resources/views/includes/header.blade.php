@@ -8,10 +8,12 @@
 
         <!-- Navigation Links - Desktop -->
         <nav class="hidden md:flex flex-1 justify-center space-x-8">
-            <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
-            <a href="#" class="text-gray-700 hover:text-gray-900">Portfolio</a>
+            <a href="#home" class="nav-link text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#about" class="nav-link text-gray-700 hover:text-gray-900">About</a>
+            <a href="#experience" class="nav-link text-gray-700 hover:text-gray-900">Experience</a>
+            <a href="#portfolio" class="nav-link text-gray-700 hover:text-gray-900">Portfolio</a>
+            <a href="#testimonials" class="nav-link text-gray-700 hover:text-gray-900">Testimoni</a>
+            <a href="#footer" class="nav-link text-gray-700 hover:text-gray-900">Contact</a>
         </nav>
         <!-- Contact Buttons Group -->
         <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
@@ -54,13 +56,12 @@
 
     <!-- Navigation Links -->
     <div class="flex flex-col items-center space-y-8 mt-10">
-        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Home</a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">About</a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Portfolio</a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Services</a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 text-lg font-medium">Project</a>
-
-        <!-- Get in Touch Button -->
+        <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Home</a>
+        <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">About</a>
+        <a href="#experience" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Pengalaman</a>
+        <a href="#portfolio" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Portfolio</a>
+        <a href="#testimonials" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Testimoni</a>
+        <a href="#footer" class="nav-link text-gray-700 hover:text-gray-900 text-lg font-medium">Contact</a>
         <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="bg-black text-white px-6 py-2.5 rounded-full text-base hover:bg-gray-800 transition duration-300 mt-6">
             Get in touch
         </a>
@@ -110,55 +111,75 @@
     });
 
 
+    // Like Counter Global (AJAX)
     document.addEventListener('DOMContentLoaded', function() {
         const likeButton = document.getElementById('likeButton');
         const likeIcon = document.getElementById('likeIcon');
         const likeCounter = document.getElementById('likeCounter');
-        let isLiked = false;
-        let likeCount = 0;
 
-        // Load state from localStorage if available
-        if (localStorage.getItem('isLiked') === 'true') {
-            isLiked = true;
-            likeCount = parseInt(localStorage.getItem('likeCount') || '0');
-            updateLikeUI();
+        // Generate device_id (UUID) dan simpan di localStorage
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        let deviceId = localStorage.getItem('device_id');
+        if (!deviceId) {
+            deviceId = generateUUID();
+            localStorage.setItem('device_id', deviceId);
         }
 
-        likeButton.addEventListener('click', function() {
-            isLiked = !isLiked;
+        // Fetch like count
+        fetch('/like-count')
+            .then(res => res.json())
+            .then(data => {
+                likeCounter.textContent = data.count > 99 ? '99+' : data.count;
+            });
 
-            if (isLiked) {
-                likeCount++;
-            } else {
-                likeCount = Math.max(0, likeCount - 1);
-            }
-
-            // Save state to localStorage
-            localStorage.setItem('isLiked', isLiked);
-            localStorage.setItem('likeCount', likeCount.toString());
-
-            updateLikeUI();
-        });
-
-        function updateLikeUI() {
-            // Update the icon
-            if (isLiked) {
-                likeIcon.setAttribute('fill', '#ef4444');  // Red fill when liked
+        // Fetch like status
+        function updateLikeUI(liked) {
+            if (liked) {
+                likeIcon.setAttribute('fill', '#ef4444');
                 likeIcon.setAttribute('stroke', '#ef4444');
+                likeCounter.classList.add('text-red-500');
             } else {
                 likeIcon.setAttribute('fill', 'none');
                 likeIcon.setAttribute('stroke', 'currentColor');
-            }
-
-            // Update the counter
-            likeCounter.textContent = likeCount > 99 ? '99+' : likeCount.toString();
-
-            // Make counter more visible if count > 0
-            if (likeCount > 0) {
-                likeCounter.classList.add('text-red-500');
-            } else {
                 likeCounter.classList.remove('text-red-500');
             }
         }
+        fetch('/like-status?device_id=' + deviceId)
+            .then(res => res.json())
+            .then(data => {
+                updateLikeUI(data.liked);
+            });
+
+        likeButton.addEventListener('click', function() {
+            fetch('/like-toggle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
+                body: JSON.stringify({ device_id: deviceId })
+            })
+            .then(res => res.json())
+            .then(data => {
+                likeCounter.textContent = data.count > 99 ? '99+' : data.count;
+                updateLikeUI(data.liked);
+            });
+        });
+
+        // Smooth scroll for nav-link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: target.offsetTop - 70, // offset for fixed navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     });
 </script>

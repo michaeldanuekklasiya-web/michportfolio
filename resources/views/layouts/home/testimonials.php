@@ -1,5 +1,5 @@
 <!-- Testimonials Section -->
-<section class="bg-white py-16">
+<section id="testimonials" class="bg-white py-16">
     <div class="container mx-auto max-w-6xl px-4">
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">What Clients Say</h2>

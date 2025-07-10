@@ -1,4 +1,4 @@
-<section class="bg-white py-16">
+<section id="portfolio" class="bg-white py-16">
     <div class="container mx-auto max-w-6xl px-4">
         <!-- Section Heading -->
         <div class="text-center mb-10">
