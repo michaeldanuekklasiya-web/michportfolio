@@ -11,7 +11,15 @@
 
         <!-- Portfolio Filters -->
         <div class="flex justify-center mb-8">
-            <div class="flex flex-wrap gap-2 bg-gray-100 p-1 rounded-lg">
+            <!-- Dropdown for mobile -->
+            <select id="projectFilterDropdown" class="block md:hidden w-full max-w-xs px-4 py-2 rounded-md border border-gray-300 text-sm font-medium bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mb-2" aria-label="Filter Projects">
+                <option value="all">All Projects</option>
+                <option value="web">Web Development</option>
+                <option value="graphic">Graphic Design</option>
+                <option value="ui">UI/UX Design</option>
+            </select>
+            <!-- Button group for desktop -->
+            <div class="hidden md:flex flex-wrap gap-2 bg-gray-100 p-1 rounded-lg">
                 <button class="filter-btn active px-4 py-2 rounded-md text-sm font-medium transition-all duration-300" data-filter="all">
                     All Projects
                 </button>
@@ -253,3 +261,46 @@
         </div>
     </div>
 </section>
+<script>
+// Portfolio filter logic (dropdown + button group)
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const dropdown = document.getElementById('projectFilterDropdown');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    function filterProjects(filter) {
+        projectCards.forEach(card => {
+            if (filter === 'all' || card.classList.contains(filter)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        // Sync button group
+        filterBtns.forEach(btn => {
+            if (btn.dataset.filter === filter) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        // Sync dropdown
+        if (dropdown && dropdown.value !== filter) {
+            dropdown.value = filter;
+        }
+    }
+
+    // Button group event
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterProjects(this.dataset.filter);
+        });
+    });
+    // Dropdown event
+    if (dropdown) {
+        dropdown.addEventListener('change', function() {
+            filterProjects(this.value);
+        });
+    }
+});
+</script>
