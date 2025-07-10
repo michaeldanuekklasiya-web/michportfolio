@@ -50,21 +50,21 @@ Route::post('/like-reset', function () {
     return response()->json(['count' => $like ? $like->count : 0]);
 });
 
-// Like status by device
+// Like status by IP
 Route::get('/like-status', function (\Illuminate\Http\Request $request) {
-    $deviceId = $request->query('device_id');
-    $liked = SiteLikeDevice::where('device_id', $deviceId)->exists();
+    $ip = $request->ip();
+    $liked = App\Models\SiteLikeDevice::where('ip_address', $ip)->exists();
     return response()->json(['liked' => $liked]);
 });
 
-// Toggle like/unlike
+// Toggle like/unlike by IP
 Route::post('/like-toggle', function (\Illuminate\Http\Request $request) {
-    $deviceId = $request->input('device_id');
-    $like = SiteLike::first();
+    $ip = $request->ip();
+    $like = App\Models\SiteLike::first();
     if (!$like) {
-        $like = SiteLike::create(['count' => 0]);
+        $like = App\Models\SiteLike::create(['count' => 0]);
     }
-    $device = SiteLikeDevice::where('device_id', $deviceId)->first();
+    $device = App\Models\SiteLikeDevice::where('ip_address', $ip)->first();
     if ($device) {
         // Unlike
         $device->delete();
@@ -73,7 +73,7 @@ Route::post('/like-toggle', function (\Illuminate\Http\Request $request) {
         return response()->json(['liked' => false, 'count' => $like->count]);
     } else {
         // Like
-        SiteLikeDevice::create(['device_id' => $deviceId]);
+        App\Models\SiteLikeDevice::create(['ip_address' => $ip]);
         $like->increment('count');
         return response()->json(['liked' => true, 'count' => $like->count]);
     }

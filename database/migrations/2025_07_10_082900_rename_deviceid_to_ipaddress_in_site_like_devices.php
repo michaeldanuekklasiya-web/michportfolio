@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('site_like_devices', function (Blueprint $table) {
-            $table->id();
-            $table->string('ip_address')->unique();
-            $table->timestamps();
+        Schema::table('site_like_devices', function (Blueprint $table) {
+            $table->renameColumn('device_id', 'ip_address');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('site_like_devices');
+        Schema::table('site_like_devices', function (Blueprint $table) {
+            $table->renameColumn('ip_address', 'device_id');
+        });
     }
-};
+}; 

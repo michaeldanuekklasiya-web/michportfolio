@@ -17,33 +17,31 @@
         </nav>
         <!-- Contact Buttons Group -->
         <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
-            <!-- Like Button -->
+            <!-- Like Button (Desktop) -->
             <div class="relative">
-                <button id="likeButton" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
-                    <svg id="likeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <button id="likeButtonDesktop" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
+                    <svg id="likeIconDesktop" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </button>
-                <span id="likeCounter" class="absolute -bottom-2 -right-1 text-xs font-medium bg-white text-gray-600 rounded-full h-5 w-5 flex items-center justify-center border border-gray-100">0</span>
+                <span id="likeCounterDesktop" class="absolute -bottom-2 -right-1 text-xs font-medium bg-white text-gray-600 rounded-full h-5 w-5 flex items-center justify-center border border-gray-100">0</span>
             </div>
-
             <!-- Get in touch Button -->
             <a href="https://www.linkedin.com/in/michaeldanuekklasiya/" class="bg-black text-white px-6 py-2.5 rounded-full hover:bg-gray-800 transition duration-300">
                 Get in touch
             </a>
         </div>
 
-
         <!-- Mobile Menu Button & Love Count (Mobile Only) -->
         <div class="md:hidden ml-4 flex items-center space-x-3">
             <!-- Like Button (Mobile) -->
             <div class="relative">
-                <button id="likeButton" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
-                    <svg id="likeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                <button id="likeButtonMobile" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition duration-300">
+                    <svg id="likeIconMobile" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </button>
-                <span id="likeCounter" class="absolute -bottom-2 -right-1 text-xs font-medium bg-white text-gray-600 rounded-full h-5 w-5 flex items-center justify-center border border-gray-100">0</span>
+                <span id="likeCounterMobile" class="absolute -bottom-2 -right-1 text-xs font-medium bg-white text-gray-600 rounded-full h-5 w-5 flex items-center justify-center border border-gray-100">0</span>
             </div>
             <!-- Hamburger Menu Button -->
             <button id="mobile-menu-button" class="text-gray-700">
@@ -135,60 +133,71 @@
 
     // Like Counter Global (AJAX)
     document.addEventListener('DOMContentLoaded', function() {
-        const likeButton = document.getElementById('likeButton');
-        const likeIcon = document.getElementById('likeIcon');
-        const likeCounter = document.getElementById('likeCounter');
-
-        // Generate device_id (UUID) dan simpan di localStorage
-        function generateUUID() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
-        }
-        let deviceId = localStorage.getItem('device_id');
-        if (!deviceId) {
-            deviceId = generateUUID();
-            localStorage.setItem('device_id', deviceId);
-        }
+        // Desktop
+        const likeButtonDesktop = document.getElementById('likeButtonDesktop');
+        const likeIconDesktop = document.getElementById('likeIconDesktop');
+        const likeCounterDesktop = document.getElementById('likeCounterDesktop');
+        // Mobile
+        const likeButtonMobile = document.getElementById('likeButtonMobile');
+        const likeIconMobile = document.getElementById('likeIconMobile');
+        const likeCounterMobile = document.getElementById('likeCounterMobile');
 
         // Fetch like count
+        function updateLikeCount(count) {
+            const display = count > 99 ? '99+' : count;
+            if (likeCounterDesktop) likeCounterDesktop.textContent = display;
+            if (likeCounterMobile) likeCounterMobile.textContent = display;
+        }
         fetch('/like-count')
             .then(res => res.json())
             .then(data => {
-                likeCounter.textContent = data.count > 99 ? '99+' : data.count;
+                updateLikeCount(data.count);
             });
 
         // Fetch like status
         function updateLikeUI(liked) {
-            if (liked) {
-                likeIcon.setAttribute('fill', '#ef4444');
-                likeIcon.setAttribute('stroke', '#ef4444');
-                likeCounter.classList.add('text-red-500');
-            } else {
-                likeIcon.setAttribute('fill', 'none');
-                likeIcon.setAttribute('stroke', 'currentColor');
-                likeCounter.classList.remove('text-red-500');
+            if (likeIconDesktop) {
+                if (liked) {
+                    likeIconDesktop.setAttribute('fill', '#ef4444');
+                    likeIconDesktop.setAttribute('stroke', '#ef4444');
+                    likeCounterDesktop.classList.add('text-red-500');
+                } else {
+                    likeIconDesktop.setAttribute('fill', 'none');
+                    likeIconDesktop.setAttribute('stroke', 'currentColor');
+                    likeCounterDesktop.classList.remove('text-red-500');
+                }
+            }
+            if (likeIconMobile) {
+                if (liked) {
+                    likeIconMobile.setAttribute('fill', '#ef4444');
+                    likeIconMobile.setAttribute('stroke', '#ef4444');
+                    likeCounterMobile.classList.add('text-red-500');
+                } else {
+                    likeIconMobile.setAttribute('fill', 'none');
+                    likeIconMobile.setAttribute('stroke', 'currentColor');
+                    likeCounterMobile.classList.remove('text-red-500');
+                }
             }
         }
-        fetch('/like-status?device_id=' + deviceId)
+        fetch('/like-status')
             .then(res => res.json())
             .then(data => {
                 updateLikeUI(data.liked);
             });
 
-        likeButton.addEventListener('click', function() {
+        function handleLikeClick() {
             fetch('/like-toggle', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content },
-                body: JSON.stringify({ device_id: deviceId })
             })
             .then(res => res.json())
             .then(data => {
-                likeCounter.textContent = data.count > 99 ? '99+' : data.count;
+                updateLikeCount(data.count);
                 updateLikeUI(data.liked);
             });
-        });
+        }
+        if (likeButtonDesktop) likeButtonDesktop.addEventListener('click', handleLikeClick);
+        if (likeButtonMobile) likeButtonMobile.addEventListener('click', handleLikeClick);
 
         // Smooth scroll for nav-link
         document.querySelectorAll('.nav-link').forEach(link => {

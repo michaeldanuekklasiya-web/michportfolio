@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiteLikeDevice extends Model
 {
-    protected $fillable = ['device_id'];
+    protected $fillable = ['ip_address'];
 } 
